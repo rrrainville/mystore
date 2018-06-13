@@ -1,0 +1,113 @@
+<html lang="en" ng-app="RescueApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ottawa Dog Rescue - Management System</title>
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <!-- Bootstrap -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/toaster.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- helper libraries -->
+  <script src="js/jquery-1.12.2.min.js" type="text/javascript"></script>
+  <!-- Libs -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-route.min.js"></script> -->
+
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+
+  <!-- daypilot libraries -->
+  <script src="js/daypilot-all.min.js?v=2018.1.3203" type="text/javascript"></script>
+
+  <!-- pagination libraries -->
+  <script src="js/dirPagination.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/">Ottawa Dog Rescue</a>
+      </div>
+      <ul class="nav navbar-nav icon-bar">
+        <li class="active">
+          <a href="#/" title="Dashboard">
+            <i class="fa fa-home"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#/animals" title="Animals">
+            <i class="fa fa-paw"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#/people" title="People">
+            <i class="fa fa-address-card-o"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#/vets" title="Veterinary">
+            <i class="fa fa-medkit"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#/activities" title="Tasks">
+            <i class="fa fa-tasks"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#/activities/events" title="Events">
+            <i class="fa fa-calendar"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#/inventory" title="Inventory">
+            <i class="fa fa-archive"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#/finance" title="Finances">
+            <i class="fa fa-money"></i>
+          </a>
+        </li>                
+        <li>
+          <a href="#/admin" title="Settings">
+            <i class="fa fa-cogs"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#/">
+            <span class="fa fa-user"></span> Sign Up</a>
+        </li>
+        <li>
+          <a href="#/">
+            <span class="fa fa-sign-in"></span> Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top:20px;">
+
+    <div ng-view></div>
+
+  </div>
+</body>
+<toaster-container toaster-options="{'time-out': 3000}"></toaster-container>
+
+<script src="app/app.js"></script>
+<script src="controllers/loginController.js"></script>
+<script src="controllers/eventController.js"></script>
+<script src="controllers/organizationController.js"></script>
+
+</html>
